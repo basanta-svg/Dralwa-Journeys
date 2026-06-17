@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Dralwa Journeys</title>
+  <meta name="description" content="Dralwa Journeys was born from a deeply personal journey — a story of illness, stillness, and discovering that connection is at the heart of everything.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/communities.css">
+  <link rel="stylesheet" href="style/about.css">
+</head>
+<body>
+
+  <!-- ── Navbar ────────────────────────────────────────────── -->
+  <header class="inner-navbar">
+    <div class="inner-nav-container">
+      <ul class="inner-nav-left">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="our-story.html" aria-current="page">Our Story</a></li>
+        <li class="nav-item-dropdown">
+          <a href="journeys.html">Journeys <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:2px"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+            <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+            <li><a href="journeys.html#the-return">The Return</a></li>
+            <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+            <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+            <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+            <li><a href="journeys.html#the-medicinal-trek">The Medicinal Trek</a></li>
+            <li><a href="journeys.html#the-upper-valley-retreat">The Upper Valley Retreat</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="index.html" class="inner-nav-logo" aria-label="Return to Dralwa Journeys home">
+        <img src="images/dralwa.png" class="logo-white" alt="Dralwa Journeys logo">
+        <img src="images/dralwa.png" class="logo-default" alt="Dralwa Journeys logo">
+      </a>
+      <ul class="inner-nav-right">
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="contact.html" class="btn-inquire">Get in Touch</a></li>
+      </ul>
+      <button class="inner-mobile-btn" id="inner-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Mobile Overlay ────────────────────────────────────── -->
+  <div class="inner-mobile-overlay" id="inner-mobile-menu">
+    <button class="mobile-overlay-close" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="mobile-overlay-centre">
+      <div class="mobile-overlay-logo"><img src="images/dralwa.png" alt="Dralwa Journeys"></div>
+      <nav class="mobile-overlay-nav">
+        <a href="philosophy.html" onclick="closeMobileMenu()">Philosophy</a>
+        <a href="our-story.html" onclick="closeMobileMenu()">Our Story</a>
+        <a href="journeys.html" onclick="closeMobileMenu()">Journeys</a>
+        <a href="stories.html" onclick="closeMobileMenu()">Stories</a>
+        <a href="communities.html" onclick="closeMobileMenu()">Communities</a>
+        <a href="contact.html" onclick="closeMobileMenu()">Get in Touch</a>
+      </nav>
+    </div>
+    <div class="mobile-overlay-socials">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="comm-hero">
+    <img src="images/pictures/punakha2.jpg" class="comm-hero-bg" alt="Punakha valley, Bhutan">
+    <div class="comm-hero-overlay"></div>
+    <div class="comm-hero-content reveal">
+      <p class="comm-hero-eyebrow">Dralwa Journeys</p>
+      <h1 class="comm-hero-title">Our Story</h1>
+    </div>
+  </section>
+
+  <!-- ── Story Section ─────────────────────────────────────── -->
+  <section class="about-story-section">
+    <div class="about-story-inner">
+
+      <div class="about-story-img-wrap reveal">
+        <img src="images/pictures/paro.jpg" class="about-story-img" alt="Paro valley, Bhutan" loading="lazy">
+      </div>
+
+      <div class="about-story-text reveal">
+        <p class="about-story-eyebrow">Our Story</p>
+        <h2 class="about-story-title">The journey that<br>inspired Dralwa</h2>
+        <p class="about-story-lead">Dralwa Journeys was born from a deeply personal journey.</p>
+        <p class="about-story-body">A serious illness forced me to pause at a time when I was rushing through life. In that stillness, I began to question what it truly means to live, to be present, and to connect. As I healed, I started travelling differently. I spent less time chasing destinations and more time immersing myself in the people, places, and moments that make life meaningful.</p>
+        <p class="about-story-body">Through these experiences, I discovered that connection is at the heart of everything — connection to place, to community, to nature, and ultimately to ourselves. Dralwa Journeys is an extension of that realisation. It is an invitation to engage deeply with places as they naturally unfold, and to travel in a way that fosters genuine connection.</p>
+        <p class="about-story-body">What began as a personal journey of healing has become an offering to travellers seeking a deeper, more meaningful way to experience the world.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Team Section ──────────────────────────────────────── -->
+  <section class="about-team-section">
+    <div class="about-team-inner">
+      <div class="about-team-header reveal">
+        <div>
+          <p class="about-team-eyebrow">The People Behind the Journeys</p>
+          <h2 class="about-team-title">Meet Our<br>Team</h2>
+        </div>
+        <p class="about-team-intro">Our small team brings together deep local roots, a lifelong love of Bhutan's valleys and traditions, and a shared belief that travel is at its best when it creates real connection.</p>
+      </div>
+
+      <div class="about-team-grid">
+
+        <div class="about-team-card reveal">
+          <div class="about-team-photo-wrap">
+            <img src="images/pictures/blog.jpg" class="about-team-photo" alt="Founder — Dralwa Journeys" loading="lazy">
+          </div>
+          <div class="about-team-info">
+            <h3 class="about-team-name">Name Placeholder</h3>
+            <p class="about-team-role">Founder &amp; Lead Guide</p>
+          </div>
+        </div>
+
+        <div class="about-team-card reveal">
+          <div class="about-team-photo-wrap">
+            <img src="images/pictures/punakha3.jpg" class="about-team-photo" alt="Team member — Dralwa Journeys" loading="lazy">
+          </div>
+          <div class="about-team-info">
+            <h3 class="about-team-name">Name Placeholder</h3>
+            <p class="about-team-role">Journey Designer</p>
+          </div>
+        </div>
+
+        <div class="about-team-card reveal">
+          <div class="about-team-photo-wrap">
+            <img src="images/pictures/paro2.jpg" class="about-team-photo" alt="Team member — Dralwa Journeys" loading="lazy">
+          </div>
+          <div class="about-team-info">
+            <h3 class="about-team-name">Name Placeholder</h3>
+            <p class="about-team-role">Community Relations</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer-section">
+    <div class="footer-top">
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-col-title">Journeys</h4>
+        <ul class="footer-links">
+          <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+          <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+          <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+          <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+          <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="philosophy.html">Our Philosophy</a></li>
+          <li><a href="#">Travel Terms</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Payment and Cancellation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:77627716">Phone: 77627716</a></li>
+          <li><a href="mailto:info@dralwajourneys.com">Email: info@dralwajourneys.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-info">
+      <p>&copy; 2026 Dralwa Journeys. All rights reserved.</p>
+      <p>Website Design and Developed by aBit Private Limited</p>
+    </div>
+  </footer>
+
+  <script src="js/about.js"></script>
+</body>
+</html>

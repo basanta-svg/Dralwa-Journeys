@@ -1,0 +1,119 @@
+/* ============================================================
+   JOURNEYS PAGE — journeys.css
+   ============================================================ */
+
+/* ── Section background ───────────────────────────────────── */
+.journey-grid-section {
+  background-image: url('../images/paper%20bg.jpg');
+  background-size: 420px;
+  background-repeat: repeat;
+}
+
+/* ── Cards grid ───────────────────────────────────────────── */
+.journey-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ── Individual card ──────────────────────────────────────── */
+.journey-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-soft-ivory);
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(107, 61, 54, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  scroll-margin-top: 110px;
+}
+
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(107, 61, 54, 0.14);
+}
+
+.journey-card-img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.journey-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.journey-card:hover .journey-card-img {
+  transform: scale(1.06);
+}
+
+.journey-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.75rem 1.75rem 2rem;
+}
+
+.journey-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-dark-rosewood);
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+}
+
+.journey-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-body-text);
+  line-height: 1.85;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.journey-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: flex-start;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-dark-rosewood);
+  background-color: var(--color-antique-gold);
+  padding: 0.85rem 1.85rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, gap 0.3s ease;
+}
+
+.journey-card-cta:hover {
+  background-color: var(--color-dark-rosewood);
+  color: var(--color-soft-ivory);
+  gap: 0.9rem;
+}
+
+.journey-cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.journey-card-cta:hover .journey-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .journey-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

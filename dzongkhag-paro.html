@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paro — Communities · Dralwa Journeys</title>
+  <meta name="description" content="Explore the communities, heritage stays, food traditions and hidden gems of Paro Dzongkhag, Bhutan.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/dzongkhag.css">
+</head>
+<body>
+
+  <header class="inner-navbar">
+    <div class="inner-nav-container">
+      <ul class="inner-nav-left">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li class="nav-item-dropdown">
+          <a href="journeys.html">Journeys <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:2px"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+            <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+            <li><a href="journeys.html#the-return">The Return</a></li>
+            <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+            <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+            <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+            <li><a href="journeys.html#the-medicinal-trek">The Medicinal Trek</a></li>
+            <li><a href="journeys.html#the-upper-valley-retreat">The Upper Valley Retreat</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="index.html" class="inner-nav-logo" aria-label="Return to Dralwa Journeys home">
+        <img src="images/dralwa.png" class="logo-white" alt="Dralwa Journeys logo">
+        <img src="images/dralwa.png" class="logo-default" alt="Dralwa Journeys logo">
+      </a>
+      <ul class="inner-nav-right">
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="contact.html" class="btn-inquire">Get in Touch</a></li>
+      </ul>
+      <button class="inner-mobile-btn" id="inner-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="inner-mobile-overlay" id="inner-mobile-menu">
+    <button class="mobile-overlay-close" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="mobile-overlay-centre">
+      <div class="mobile-overlay-logo"><img src="images/dralwa.png" alt="Dralwa Journeys"></div>
+      <nav class="mobile-overlay-nav">
+        <a href="philosophy.html" onclick="closeMobileMenu()">Philosophy</a>
+        <a href="our-story.html" onclick="closeMobileMenu()">Our Story</a>
+        <a href="journeys.html" onclick="closeMobileMenu()">Journeys</a>
+        <a href="stories.html" onclick="closeMobileMenu()">Stories</a>
+        <a href="communities.html" onclick="closeMobileMenu()">Communities</a>
+        <a href="contact.html" onclick="closeMobileMenu()">Get in Touch</a>
+      </nav>
+    </div>
+    <div class="mobile-overlay-socials">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="dz-hero">
+    <img src="images/pictures/taktshang2.jpg" class="dz-hero-bg" alt="Paro valley, Bhutan">
+    <div class="dz-hero-overlay"></div>
+    <div class="dz-hero-content reveal">
+      <p class="dz-hero-breadcrumb"><a href="communities.html">Communities</a> <span>›</span> Paro</p>
+      <p class="dz-hero-region">Western Bhutan</p>
+      <h1 class="dz-hero-title">Paro</h1>
+    </div>
+  </section>
+
+  <!-- ── Overview ──────────────────────────────────────────── -->
+  <section class="dz-overview">
+    <img src="images/pictures/paro2.jpg" class="dz-overview-bg" alt="Paro Dzong and valley">
+    <div class="dz-overview-overlay"></div>
+    <div class="dz-overview-inner reveal">
+      <p class="dz-overview-eyebrow">About Paro</p>
+      <div class="dz-overview-headline" role="heading" aria-level="2">
+        <div class="dz-overview-line dz-overview-line-soft">A Valley Of</div>
+        <div class="dz-overview-line dz-overview-line-bold">Living Traditions</div>
+      </div>
+      <div class="dz-overview-text">
+        <p class="dz-overview-body">Paro is Bhutan's most storied valley — a place where the ancient and the living exist side by side without apology. Beyond Tiger's Nest and the dzong lies a community of weavers, farmers, distillers and homeowners whose lives unfold quietly in the shadow of sacred cliffs.</p>
+        <p class="dz-overview-body">Every experience here is offered not as a service, but as an invitation into lives genuinely lived — through shared meals, morning pujas and unhurried conversations over butter tea.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Filter + Editorial Items ──────────────────────────── -->
+  <section class="dz-filter-section">
+    <div class="dz-filter-inner">
+
+      <div class="dz-filter-bar" role="tablist">
+        <button class="dz-filter-btn" data-filter="communities" role="tab"><i class="ti ti-users"></i> Communities</button>
+        <button class="dz-filter-btn" data-filter="heritage"    role="tab"><i class="ti ti-building-fortress"></i> Heritage Stays</button>
+        <button class="dz-filter-btn" data-filter="food"        role="tab"><i class="ti ti-soup"></i> Food &amp; Flavour</button>
+        <button class="dz-filter-btn" data-filter="hidden"      role="tab"><i class="ti ti-diamond"></i> Hidden Gems</button>
+      </div>
+
+      <!-- Communities -->
+        <div class="dz-category-content" data-category="communities">
+          <h2 class="dz-category-title">Communities of Paro</h2>
+          <p class="dz-article-dropcap">In Paro, the most memorable encounters rarely happen at the famous sites — they happen in farmhouse kitchens, on looms, and along quiet ridgelines, shared with people who have called this valley home for generations. In the Shaba valley, one family has farmed the same terraced fields for four generations, rotating between red rice, buckwheat, and the chillies that hang drying along every wall come autumn. Visitors who spend a morning here are welcomed not as guests to be entertained, but as extra hands for the day's work — pressing cheese, ploughing, or gathering the harvest alongside people who measure time by the seasons rather than the clock.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/punakha2.jpg" class="dz-article-img" alt="Terraced fields above Shaba valley" loading="lazy">
+            <figcaption class="dz-article-caption">Terraced fields above Shaba valley, farmed by the same family for four generations.</figcaption>
+          </figure>
+          <p class="dz-article-body">A short drive away, along the winding road that climbs toward Tiger's Nest, a small cluster of homes keeps the art of kishuthara weaving alive. It is among Bhutan's most intricate textile traditions — woven entirely by hand using a supplementary warp technique that can take months to complete a single piece. The women here learned from their mothers, who learned from theirs, and the patterns they weave carry memory as much as meaning. Visitors are invited to sit beside the looms, ask questions, and try a few passes of the shuttle under patient guidance.</p>
+          <p class="dz-article-body">On the ridgelines above the valley, a different kind of community is at work. A small group of young Bhutanese naturalists spend their weekends surveying the slopes and riverbanks, counting birds and tracking migratory patterns — quietly building one of the only long-term records of Paro's birdlife, mostly without funding or recognition. Further down the valley, at the ruins of an old dzong, a handful of monks continue rituals first performed here centuries ago, rising before dawn for a puja that has carried on, season after season, since long before the fortress fell into ruin.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/mountain-sunset.jpg" class="dz-article-img" alt="Ridgelines above the Paro valley" loading="lazy">
+            <figcaption class="dz-article-caption">The ridgelines above Paro, surveyed each weekend by a group of young local naturalists.</figcaption>
+          </figure>
+          <p class="dz-article-body">Spend time with the people who live here, and Paro reveals itself differently — not as a place to see, but as a place to be part of, even briefly.</p>
+        </div>
+
+        <!-- Heritage Stays -->
+        <div class="dz-category-content hidden" data-category="heritage">
+          <h2 class="dz-category-title">Heritage Stays in Paro</h2>
+          <p class="dz-article-dropcap">The walls of one heritage lodge in the valley were built by hand, the traditional way, using rammed earth nearly a metre thick — a technique that took an entire dry season and the labour of half the village to complete. Today those same walls keep the lodge's seven guest rooms cool in summer and warm through the long winter nights, and the family who built them still oversees the kitchen, sorting chillies on the rooftop in the early morning light.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/bhutanese-house.jpg" class="dz-article-img" alt="Traditional Bhutanese farmhouse" loading="lazy">
+            <figcaption class="dz-article-caption">A traditional Bhutanese farmhouse, its rammed-earth walls nearly a metre thick.</figcaption>
+          </figure>
+          <p class="dz-article-body">Higher in the valley, where the road narrows to a dirt track, another family runs a small working farm with two simple guest rooms above the cowshed. Mornings begin early and loudly — with cattle, roosters, and fresh milk still warm from the morning milking — and there is no set itinerary beyond the rhythm of the farm itself.</p>
+          <p class="dz-article-body">Elsewhere, a 300-year-old watchtower has been carefully restored into a four-room guesthouse, its original stone walls and narrow defensive windows left intact. The real draw is the rooftop, reached by a steep internal stair, where on a clear morning the white form of Taktshang Monastery is visible clinging to the cliffs across the valley.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/paro.jpg" class="dz-article-img" alt="Buckwheat fields toward Paro Dzong" loading="lazy">
+            <figcaption class="dz-article-caption">Buckwheat fields stretch toward Paro Dzong, a view shared by several heritage homes in the valley.</figcaption>
+          </figure>
+          <p class="dz-article-body">And in one lower-valley homestead, there is no reception desk or guest area at all — visitors are simply shown to a spare room and absorbed into the household, eating at the family's low table and sharing whatever has been cooked that day. For travellers wanting to understand how a Bhutanese family actually lives, it is hard to find anything closer.</p>
+        </div>
+
+        <!-- Food & Flavour -->
+        <div class="dz-category-content hidden" data-category="food">
+          <h2 class="dz-category-title">Food &amp; Flavour of Paro</h2>
+          <p class="dz-article-dropcap">Perma grew up in a small valley where mornings smelled of woodsmoke and damp earth. In her family's kitchen, the walls were darkened by years of fire, and a thin blade of Himalayan light fell through a single window. That kitchen is where she first understood that Bhutanese cooking is simple — but never plain.</p>
+          <p class="dz-article-body">Outside the house, another quiet preparation was always underway. Red chillies — ema — were spread across rooftops, stone walls, and woven mats to dry in the high mountain sun. For weeks each autumn, valleys across Bhutan turn crimson as families lay out their harvest. The dry air and strong Himalayan light slowly pull the moisture from each chilli, concentrating its heat and flavour, until the once-bright pods become deep, wrinkled reds — ready to be ground, stored, or steamed into the dish that anchors nearly every Bhutanese table.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/punakha3.jpg" class="dz-article-img" alt="Sun-dried red chillies" loading="lazy">
+            <figcaption class="dz-article-caption">Sun-dried ema chillies, fresh heat ripening in the Himalayan air.</figcaption>
+          </figure>
+          <p class="dz-article-body">One afternoon, when Perma was old enough to cook on her own, her grandmother spoke the recipe aloud, slowly, as if dictating from a cookbook, and made Perma repeat it back. The dish she was learning was ema datshi — Bhutan's national dish, and one of the most beloved foods in the country.</p>
+          <h4 class="dz-article-heading">Ingredients for Ema Datshi</h4>
+          <ul class="dz-article-list">
+            <li>8–12 fresh green chillies (or dried red chillies, ema kham, soaked 10–15 minutes)</li>
+            <li>1–2 cups water</li>
+            <li>1/2 cup Bhutanese datshi cheese, broken into chunks</li>
+            <li>1–2 tablespoons oil or butter</li>
+            <li>Salt to taste</li>
+            <li>Optional: 1–2 teaspoons butter for extra richness</li>
+          </ul>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/kitchen-utensils.jpg" class="dz-article-img" alt="A bowl of ema datshi" loading="lazy">
+            <figcaption class="dz-article-caption">The finished dish — ema datshi, served the way Perma's family has made it for generations.</figcaption>
+          </figure>
+          <p class="dz-article-body">Beyond the kitchen, food in Paro is woven into the rhythm of the valley itself. In one nearby village, a cooperative of women still distil ara — Bhutan's traditional grain spirit — over a wood fire using a stacked clay-and-bamboo still, a process passed down almost entirely by word of mouth. Before sunrise each week, farmers gather at the riverside dawn market with red rice, dried chillies, and seasonal greens, trading and bartering long before the rest of the valley wakes. And once a year, at harvest time, the cycle comes full circle: families bring in the red rice from the terraced fields and cook a communal meal over an open fire, sharing it together on mats spread across the stubble.</p>
+        </div>
+
+        <!-- Hidden Gems -->
+        <div class="dz-category-content hidden" data-category="hidden">
+          <h2 class="dz-category-title">Hidden Gems of Paro</h2>
+          <p class="dz-article-dropcap">Most visitors climbing to Tiger's Nest pass directly through a wide meadow about halfway up the trail, eyes fixed on the monastery still hundreds of metres above. Few stop. Fewer still notice the small tea house at the meadow's edge, run by a family from the valley below who have served tea to pilgrims and travellers here for decades. In spring the meadow fills with wildflowers; in autumn, with the gold of turning birch leaves.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/taktshang.jpg" class="dz-article-img" alt="Taktshang Monastery from a quiet meadow" loading="lazy">
+            <figcaption class="dz-article-caption">Taktshang Monastery seen from a quiet meadow, away from the main viewpoint crowds.</figcaption>
+          </figure>
+          <p class="dz-article-body">Elsewhere in the valley, behind a 15th-century temple whose interior murals are said to map the Buddhist path to enlightenment, lies a small walled garden unknown to most visitors. A caretaker tends it in silence each morning, and guests who ask politely, and arrive with some patience, are sometimes invited through the gate.</p>
+          <p class="dz-article-body">At one of Bhutan's oldest temples, the inner sanctum — normally viewed from behind a railing — is opened fully before 7am for a dawn puja that has been performed here, in some form, for over a thousand years. Visitors who arrive early are usually permitted to sit quietly at the back, close enough to feel the heat of the butter lamps.</p>
+          <figure class="dz-article-figure">
+            <img src="images/pictures/Bbirdwatching1.jpg" class="dz-article-img" alt="Early morning light over the Paro valley" loading="lazy">
+            <figcaption class="dz-article-caption">Early morning light over the valley, the best time to find Paro at its quietest.</figcaption>
+          </figure>
+          <p class="dz-article-body">And on the valley's eastern edge, where the road turns to a footpath and disappears into farmland, a small stone-walled pool sits fed by a natural hot spring — used by farming families for generations, with no sign, no ticket booth, and no name on any map. What it offers instead is mineral-rich water, total quiet, and often the company of a farmer or two, equally happy to sit and say nothing for a while.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer-section">
+    <div class="footer-top">
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-col-title">Journeys</h4>
+        <ul class="footer-links">
+          <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+          <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+          <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+          <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+          <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="philosophy.html">About Us</a></li>
+          <li><a href="#">Travel Terms</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Payment and Cancellation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:77627716">Phone: 77627716</a></li>
+          <li><a href="mailto:info@dralwajourneys.com">Email: info@dralwajourneys.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-info">
+      <p>&copy; 2026 Dralwa Journeys. All rights reserved.</p>
+      <p>Website Design and Developed by aBit Private Limited</p>
+    </div>
+  </footer>
+
+  <script src="js/dzongkhag.js"></script>
+</body>
+</html>
+
+
+
+

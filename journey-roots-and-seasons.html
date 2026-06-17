@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roots and Seasons — Dralwa Journeys</title>
+  <meta name="description"
+    content="A 7-day journey into the land and its people — sacred temples, farm life shaped by the seasons, a cliffside nunnery, and Tiger's Nest.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/communities.css">
+  <link rel="stylesheet" href="style/stories.css">
+  <link rel="stylesheet" href="style/journey-detail.css">
+</head>
+
+<body>
+
+  <!-- ── Navbar ────────────────────────────────────────────── -->
+  <header class="inner-navbar">
+    <div class="inner-nav-container">
+      <ul class="inner-nav-left">
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li class="nav-item-dropdown">
+          <a href="journeys.html" aria-current="page">Journeys <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="vertical-align:middle;margin-left:2px">
+              <path d="M6 9l6 6 6-6" />
+            </svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+            <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+            <li><a href="journeys.html#the-return">The Return</a></li>
+            <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+            <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+            <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+            <li><a href="journeys.html#the-medicinal-trek">The Medicinal Trek</a></li>
+            <li><a href="journeys.html#the-upper-valley-retreat">The Upper Valley Retreat</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="index.html" class="inner-nav-logo" aria-label="Return to Dralwa Journeys home">
+        <img src="images/dralwa.png" class="logo-white" alt="Dralwa Journeys logo">
+        <img src="images/dralwa.png" class="logo-default" alt="Dralwa Journeys logo">
+      </a>
+      <ul class="inner-nav-right">
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="contact.html" class="btn-inquire">Get in Touch</a></li>
+      </ul>
+      <button class="inner-mobile-btn" id="inner-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Mobile Overlay ────────────────────────────────────── -->
+  <div class="inner-mobile-overlay" id="inner-mobile-menu">
+    <button class="mobile-overlay-close" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="mobile-overlay-centre">
+      <div class="mobile-overlay-logo"><img src="images/dralwa.png" alt="Dralwa Journeys"></div>
+      <nav class="mobile-overlay-nav">
+        <a href="philosophy.html" onclick="closeMobileMenu()">Philosophy</a>
+        <a href="our-story.html" onclick="closeMobileMenu()">Our Story</a>
+        <a href="journeys.html" onclick="closeMobileMenu()">Journeys</a>
+        <a href="stories.html" onclick="closeMobileMenu()">Stories</a>
+        <a href="communities.html" onclick="closeMobileMenu()">Communities</a>
+        <a href="contact.html" onclick="closeMobileMenu()">Get in Touch</a>
+      </nav>
+    </div>
+    <div class="mobile-overlay-socials">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+        </svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4l16 16M4 20L20 4" />
+        </svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z" />
+          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+        </svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+        </svg></a>
+    </div>
+  </div>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="comm-hero">
+    <img src="images/pictures/locals.jpg" class="comm-hero-bg" alt="Farmland and traditional homes in a Bhutanese valley">
+    <div class="comm-hero-overlay"></div>
+    <div class="comm-hero-content reveal">
+      <p class="comm-hero-eyebrow">7 Days · 6 Nights</p>
+      <h1 class="comm-hero-title">Roots and Seasons</h1>
+      <p class="comm-hero-sub">A journey into the land and its people</p>
+    </div>
+  </section>
+
+  <!-- ── Intro ─────────────────────────────────────────────── -->
+  <section class="jdetail-intro">
+    <div class="jdetail-intro-inner reveal">
+      <p class="jdetail-intro-eyebrow">The Journey</p>
+      <p class="jdetail-intro-text jdetail-dropcap">Bhutan is not a backdrop. It is a living world with its own
+        wisdom, its own rhythm, its own way of being. This journey takes you into the heart of it — into homes,
+        kitchens, and conversations that stay with you long after you leave. What you experience depends on when you
+        arrive. The land moves with the seasons, and so does this journey.</p>
+    </div>
+  </section>
+
+  <!-- ── Itinerary (Accordion) ─────────────────────────────── -->
+  <section class="jdetail-itinerary">
+    <div class="jdetail-itinerary-inner">
+
+      <div class="jdetail-accordion-item reveal is-open">
+        <button class="jdetail-accordion-summary" aria-expanded="true">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 01</p>
+            <h2 class="jdetail-day-title">Arrival — Sacred Temple &amp; First Evening</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">Arrive into the valley. A visit to a sacred 15th-century temple with a monk who
+              explains its murals and the daily life of devotion that continues here unchanged. Afternoon at a
+              family-owned craft brewery — a small window into how Bhutan holds old and new at once. Evening stroll
+              through town, no agenda.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 02</p>
+            <h2 class="jdetail-day-title">Seeds, the Land &amp; a 500-Year Home</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">A day shaped entirely by the season you arrive in. Rice planting by hand in
+              summer, harvest alongside farming families in autumn, apple picking in the cool mountain air come
+              October. Farm lunch. Traditional archery, Khuru, and a taste of home-brewed ara. Afternoon inside a home
+              nearly 500 years old — a private collection of sacred objects rarely seen by outsiders. The day closes
+              with a sand mandala, grain by grain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 03</p>
+            <h2 class="jdetail-day-title">Over the Pass — The Nunnery &amp; the Song</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">Cross one of the highest motorable passes in Bhutan. Pause to hang prayer flags
+              at the summit. Descend through forest to the oldest nunnery in Bhutan — built into the cliffside, home to
+              around fifty nuns. Sit with them, share a meal, spend time in the stillness. Arrive in the hidden valley
+              as evening falls. A bonfire, and a 150-year-old song sung in honour of the valley's guardian deity —
+              performed, if conditions allow, by the women who still carry it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 04</p>
+            <h2 class="jdetail-day-title">Walking the Valley — Into the Capital</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">Morning hike along the river through open farmland and small communities.
+              Picnic lunch along the way. Drive to the capital as evening settles. A slow stroll through the city. No
+              programme. Just arrival.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 05</p>
+            <h2 class="jdetail-day-title">Healing, Craft &amp; the Drive Back</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">Morning practice rooted in Bhutan's healing tradition — meditation and gentle
+              healing movements guided by a traditional medicine practitioner, at the base of the great golden Buddha
+              overlooking the capital valley. A wellness consultation follows, then a cooking demonstration and
+              traditional lunch at a heritage village home. Afternoon: a prayer flag printing workshop at one of
+              Bhutan's most celebrated schools of traditional arts. Drive back to the first valley.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 06</p>
+            <h2 class="jdetail-day-title">Tiger's Nest</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">An early start through pine forest and prayer flags to Tiger's Nest — the
+              monastery perched 900 metres above the valley floor, built around the cave where Guru Rinpoche is said to
+              have meditated. Inside: small temples, incense, deep stillness. Lunch with the monastery visible across
+              the cliff. Evening: a hot stone bath infused with medicinal herbs — the kind of thing your body remembers
+              long after you leave.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jdetail-accordion-item reveal">
+        <button class="jdetail-accordion-summary" aria-expanded="false">
+          <div class="jdetail-accordion-heading">
+            <p class="jdetail-day-label">Day 07</p>
+            <h2 class="jdetail-day-title">Departure</h2>
+          </div>
+          <span class="jdetail-accordion-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="jdetail-accordion-content">
+          <div class="jdetail-accordion-content-inner">
+            <p class="jdetail-day-desc">After breakfast, transfer to the airport for your onward journey.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Gallery Carousel ──────────────────────────────────── -->
+  <section class="jdetail-gallery">
+    <div class="jdetail-gallery-inner">
+      <div class="jdetail-gallery-header">
+        <h2 class="jdetail-gallery-title">Glimpses Along the Way</h2>
+      </div>
+    </div>
+      <div class="jdetail-gallery-viewport">
+        <button class="jdetail-gallery-btn jdetail-gallery-prev" id="jdetail-gallery-prev" aria-label="Previous image">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="jdetail-gallery-btn jdetail-gallery-next" id="jdetail-gallery-next" aria-label="Next image">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="jdetail-gallery-track" id="jdetail-gallery-track">
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/monks-reading.jpg" alt="A sacred temple in the Paro valley" loading="lazy">
+            </div>
+          </figure>
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/wool-spinning.jpg" alt="Farming life in a Bhutanese valley" loading="lazy">
+            </div>
+          </figure>
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/jomolhari-lake.jpg" alt="A high mountain pass in Bhutan" loading="lazy">
+            </div>
+          </figure>
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/bikeing1.jpg" alt="Walking the river valley toward the capital" loading="lazy">
+            </div>
+          </figure>
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/buddha-dordenma.jpg" alt="The Buddha Dordenma above Thimphu" loading="lazy">
+            </div>
+          </figure>
+          <figure class="jdetail-gallery-slide">
+            <div class="jdetail-gallery-slide-img">
+              <img src="images/pictures/taktshang.jpg" alt="Tiger's Nest monastery, Paro" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </div>
+  </section>
+
+  <!-- ── Gallery Lightbox ──────────────────────────────────── -->
+  <div class="jdetail-lightbox" id="jdetail-lightbox">
+    <button class="jdetail-lightbox-close" id="jdetail-lightbox-close" aria-label="Close image view">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <img src="" alt="" id="jdetail-lightbox-img">
+  </div>
+
+  <!-- ── Closing CTA ───────────────────────────────────────── -->
+  <section class="jdetail-cta-section">
+    <img src="images/pictures/bhutanese-house.jpg" class="jdetail-cta-bg" alt="A farmhouse stay in rural Bhutan">
+    <div class="jdetail-cta-overlay"></div>
+    <div class="jdetail-cta-content reveal">
+      <p class="jdetail-cta-eyebrow">Begin Your Journey</p>
+      <h2 class="jdetail-cta-title">Let the land and its seasons shape your days in Bhutan</h2>
+      <a href="contact.html" class="jdetail-cta-btn">Enquire Now</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer-section">
+    <div class="footer-top">
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg></a>
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-col-title">Journeys</h4>
+        <ul class="footer-links">
+          <li><a href="journeys.html#roots-and-seasons">Roots and Seasons</a></li>
+          <li><a href="journeys.html#the-living-trail">The Living Trail</a></li>
+          <li><a href="journeys.html#the-women-of-bhutan">The Women of Bhutan</a></li>
+          <li><a href="journeys.html#the-farmhouse-circuit">The Farmhouse Circuit</a></li>
+          <li><a href="journeys.html#into-the-high-country">Into The High Country</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="philosophy.html">Our Philosophy</a></li>
+          <li><a href="#">Travel Terms</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Payment and Cancellation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:77627716">Phone: 77627716</a></li>
+          <li><a href="mailto:info@dralwajourneys.com">Email: info@dralwajourneys.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-info">
+      <p>&copy; 2026 Dralwa Journeys. All rights reserved.</p>
+      <p>Website Design and Developed by aBit Private Limited</p>
+    </div>
+  </footer>
+
+  <script src="js/about.js"></script>
+  <script src="js/journey-detail.js"></script>
+</body>
+
+</html>

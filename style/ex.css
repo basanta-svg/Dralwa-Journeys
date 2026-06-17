@@ -1,0 +1,662 @@
+﻿/* ============================================================
+   EX.CSS — Colour-theme overrides for index2 / index3 / index4
+   Each [data-theme] block re-maps the CSS custom properties
+   defined in index.css so every component picks up the new
+   palette automatically — no HTML or structure changes needed.
+   ============================================================ */
+
+
+/* ────────────────────────────────────────────────────────────
+   THEME: forest  →  index2.html
+   Sage leaf #7FB5A0  ·  Deep forest #1A3A38
+   Full mint colour system — header to footer
+   ──────────────────────────────────────────────────────────── */
+
+/* ── 1. CSS CUSTOM PROPERTIES ─────────────────────────────── */
+[data-theme="forest"] {
+  --color-blush-parchment: #DFF0EB;   /* light mint — main section bg  */
+  --color-deep-blush:      #B8D9D2;   /* mid mint — alternate tint     */
+  --color-dusty-rose:      #7FB5A0;   /* sage leaf — primary accent    */
+  --color-warm-mauve:      #4E9080;   /* medium sage — hover / labels  */
+  --color-faded-peony:     #A8CECA;   /* pale sage — borders           */
+  --color-dark-rosewood:   #1A3A38;   /* deep forest — headings / dark */
+  --color-antique-gold:    #7FB5A0;   /* sage leaf as decorative accent*/
+  --color-soft-ivory:      #F0FAF8;   /* near-white mint — cards / CTAs*/
+  --color-body-text:       #2A4A46;   /* readable dark teal            */
+}
+
+/* ── 2. NAVBAR — transparent over hero ────────────────────── */
+/* Transparent state inherits white text from index.css — no change needed */
+
+/* Scrolled: deep forest bar — modern dark nav */
+[data-theme="forest"] .inner-navbar.scrolled {
+  background-color: rgba(26, 58, 56, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(127, 181, 160, 0.3);
+  box-shadow: 0 2px 24px rgba(26, 58, 56, 0.18);
+}
+
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-left a,
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-right a:not(.btn-inquire) {
+  color: #F0FAF8;
+}
+
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-left a:hover,
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-right a:not(.btn-inquire):hover {
+  color: #7FB5A0;
+}
+
+[data-theme="forest"] .inner-navbar.scrolled .btn-inquire {
+  color: #1A3A38;
+  background-color: #7FB5A0;
+  border-color: #7FB5A0;
+}
+
+[data-theme="forest"] .inner-navbar.scrolled .btn-inquire:hover {
+  background-color: #4E9080;
+  border-color: #4E9080;
+  color: #fff;
+}
+
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-left > li > a::after,
+[data-theme="forest"] .inner-navbar.scrolled .inner-nav-right > li > a:not(.btn-inquire)::after {
+  background-color: #7FB5A0;
+}
+
+/* Nav dropdown */
+[data-theme="forest"] .nav-dropdown {
+  background-color: #1A3A38;
+  border-color: rgba(127, 181, 160, 0.25);
+}
+
+[data-theme="forest"] .nav-dropdown a {
+  color: #DFF0EB !important;
+}
+
+[data-theme="forest"] .nav-dropdown a:hover {
+  background-color: rgba(127, 181, 160, 0.15);
+  color: #7FB5A0 !important;
+}
+
+/* Logo: show default logo in scrolled state */
+[data-theme="forest"] .inner-navbar.scrolled .logo-default { display: none; }
+[data-theme="forest"] .inner-navbar.scrolled .logo-white   { display: block; }
+
+/* ── 3. HERO — natural image, neutral overlay ─────────────── */
+[data-theme="forest"] .inner-hero-bg {
+  filter: brightness(0.80) saturate(1);
+}
+
+[data-theme="forest"] .inner-hero-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+/* Hero CTA */
+[data-theme="forest"] .btn-hero {
+  background: rgba(127, 181, 160, 0.2);
+  border-color: #7FB5A0;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+[data-theme="forest"] .btn-hero:hover {
+  background: #7FB5A0;
+  color: #1A3A38;
+  border-color: #7FB5A0;
+}
+
+/* ── 4. JOURNEY TYPES SECTION ─────────────────────────────── */
+[data-theme="forest"] .journey-types-section {
+  background: #DFF0EB;
+}
+
+[data-theme="forest"] .journey-types-eyebrow { color: #4E9080; }
+[data-theme="forest"] .journey-types-title   { color: #1A3A38; }
+
+[data-theme="forest"] .jt-card {
+  background-color: #F0FAF8;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+[data-theme="forest"] .jt-card:hover {
+  border-bottom-color: #7FB5A0;
+  transform: translateY(-4px);
+}
+
+[data-theme="forest"] .jt-name  { color: #1A3A38; }
+[data-theme="forest"] .jt-desc  { color: #2A4A46; }
+[data-theme="forest"] .jt-arrow { color: #7FB5A0; }
+
+[data-theme="forest"] .slider-btn {
+  background: #1A3A38;
+  color: #7FB5A0;
+  border: 1px solid #7FB5A0;
+}
+
+[data-theme="forest"] .slider-btn:hover {
+  background: #7FB5A0;
+  color: #1A3A38;
+}
+
+/* ── 5. ABOUT / OUR STORY SECTION ─────────────────────────── */
+[data-theme="forest"] .about-section { background-color: #1A3A38; }
+
+[data-theme="forest"] .about-bg {
+  filter: brightness(0.68) saturate(1);
+}
+
+[data-theme="forest"] .about-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(26, 58, 56, 0.95) 0%,
+    rgba(26, 58, 56, 0.80) 45%,
+    rgba(26, 58, 56, 0.18) 70%,
+    transparent 100%
+  );
+}
+
+[data-theme="forest"] .about-eyebrow::before { background-color: #7FB5A0; }
+[data-theme="forest"] .about-eyebrow         { color: #7FB5A0; }
+[data-theme="forest"] .about-title           { color: #F0FAF8; }
+[data-theme="forest"] .about-desc            { color: rgba(223, 240, 235, 0.82); }
+
+[data-theme="forest"] .btn-about {
+  border-color: #7FB5A0;
+  color: #F0FAF8;
+}
+
+[data-theme="forest"] .btn-about:hover {
+  background: #7FB5A0;
+  color: #1A3A38;
+}
+
+/* ── 6. TRANSFORMATION STRIP ──────────────────────────────── */
+[data-theme="forest"] .transformation-text { background-color: #1A3A38; }
+
+[data-theme="forest"] .transformation-text::after {
+  background: linear-gradient(to bottom, transparent, #7FB5A0 30%, #7FB5A0 70%, transparent);
+}
+
+[data-theme="forest"] .transformation-eyebrow        { color: #7FB5A0; }
+[data-theme="forest"] .transformation-eyebrow::before{ background-color: #7FB5A0; }
+[data-theme="forest"] .transformation-heading        { color: #F0FAF8; }
+[data-theme="forest"] .transformation-desc           { color: rgba(223, 240, 235, 0.78); }
+
+[data-theme="forest"] .transformation-image::before {
+  background: linear-gradient(to right, #1A3A38, transparent);
+}
+
+[data-theme="forest"] .btn-explore            { border-color: #7FB5A0; color: #F0FAF8; }
+[data-theme="forest"] .btn-explore:hover      { background: #7FB5A0; color: #1A3A38; }
+
+/* ── 7. STORIES SECTION ───────────────────────────────────── */
+[data-theme="forest"] .stories-section     { background: #DFF0EB; }
+[data-theme="forest"] .stories-eyebrow    { color: #4E9080; }
+[data-theme="forest"] .stories-title      { color: #1A3A38; }
+
+[data-theme="forest"] .stories-nav-btn {
+  border-color: #1A3A38;
+  color: #1A3A38;
+}
+
+[data-theme="forest"] .stories-nav-btn:hover {
+  background: #1A3A38;
+  color: #7FB5A0;
+  border-color: #1A3A38;
+}
+
+[data-theme="forest"] .story-card-tag    { color: #7FB5A0; }
+[data-theme="forest"] .story-card-arrow {
+  background: rgba(127, 181, 160, 0.18);
+  border-color: rgba(127, 181, 160, 0.5);
+}
+
+[data-theme="forest"] .story-card-arrow:hover {
+  background: #7FB5A0;
+  border-color: #7FB5A0;
+  color: #1A3A38;
+}
+
+/* ── 8. BESPOKE PRIVATE JOURNEYS ──────────────────────────── */
+[data-theme="forest"] #private-travel   { background: #DFF0EB; }
+
+[data-theme="forest"] .journey-card {
+  background-color: #fff;
+  border-color: #B8D9D2;
+}
+
+[data-theme="forest"] .journey-card:hover {
+  border-color: #7FB5A0;
+  box-shadow: 0 12px 32px rgba(26, 58, 56, 0.1);
+}
+
+[data-theme="forest"] .journey-title  { color: #1A3A38; }
+[data-theme="forest"] .journey-desc   { color: #2A4A46; }
+[data-theme="forest"] .journey-badge  { background-color: #B8D9D2; color: #1A3A38; }
+[data-theme="forest"] .journey-divider{ background-color: #B8D9D2; }
+
+[data-theme="forest"] .link-arrow     { color: #4E9080; }
+[data-theme="forest"] .link-arrow:hover{ color: #1A3A38; }
+
+[data-theme="forest"] .section-eyebrow { color: #4E9080; }
+[data-theme="forest"] .section-title   { color: #1A3A38; }
+[data-theme="forest"] .section-title::after { color: #7FB5A0; }
+
+/* ── 9. BHUTAN MAP ────────────────────────────────────────── */
+[data-theme="forest"] .bhutan-map-section {
+  background: #DFF0EB;
+}
+
+/* Kill the default radial glow overlay so no colour bleed at section edges */
+[data-theme="forest"] .bhutan-map-section::before {
+  display: none;
+}
+
+[data-theme="forest"] .bhutan-map-section .section-eyebrow { color: #4E9080; }
+[data-theme="forest"] .bhutan-map-section .section-title   { color: #1A3A38; }
+[data-theme="forest"] .bhutan-map-subtitle                  { color: #2A4A46; }
+
+[data-theme="forest"] .map-container svg .district {
+  fill: #7FB5A0;
+  stroke: #1A3A38;
+}
+
+[data-theme="forest"] .map-container svg:hover .district   { fill: #A8CECA; opacity: 0.7; }
+
+[data-theme="forest"] .map-container svg .district:hover,
+[data-theme="forest"] .map-container svg .district.active  { fill: #4E9080 !important; opacity: 1 !important; }
+
+[data-theme="forest"] .map-fact-card {
+  background: #F0FAF8;
+  border-color: #B8D9D2;
+}
+
+[data-theme="forest"] .map-fact-card:hover {
+  background: #DFF0EB;
+  border-color: #7FB5A0;
+  transform: translateX(4px);
+}
+
+[data-theme="forest"] .map-fact-number { color: #1A3A38; }
+[data-theme="forest"] .map-fact-label  { color: #4E9080; }
+
+[data-theme="forest"] .map-tooltip {
+  background: #F0FAF8;
+  border-color: rgba(127, 181, 160, 0.4);
+}
+
+[data-theme="forest"] .map-tooltip-name { color: #1A3A38; }
+[data-theme="forest"] .map-tooltip-desc { color: #2A4A46; }
+
+[data-theme="forest"] .map-tooltip::after {
+  background: #F0FAF8;
+  border-color: rgba(127, 181, 160, 0.4);
+}
+
+/* ── 10. AFFILIATES ───────────────────────────────────────── */
+[data-theme="forest"] .affiliates-section,
+[data-theme="forest"] #inquire {
+  background: #DFF0EB;
+  border-top: none;
+  border-bottom: none;
+}
+
+[data-theme="forest"] .affiliates-eyebrow { color: #4E9080; }
+[data-theme="forest"] .affiliates-title   { color: #1A3A38; }
+
+[data-theme="forest"] .affiliate-logo-item           { opacity: 0.65; filter: grayscale(0.2); }
+[data-theme="forest"] .affiliate-logo-item:hover     { opacity: 1; filter: none; }
+
+/* ── 12. MOBILE OVERLAY ───────────────────────────────────── */
+[data-theme="forest"] .inner-mobile-overlay     { background-color: #DFF0EB; }
+[data-theme="forest"] .inner-mobile-overlay a   { color: #1A3A38; }
+[data-theme="forest"] .inner-mobile-overlay a:hover { color: #7FB5A0; }
+[data-theme="forest"] .mobile-overlay-close     { color: #1A3A38; }
+[data-theme="forest"] .mobile-overlay-socials a { color: #4E9080; }
+[data-theme="forest"] .mobile-overlay-socials a:hover { color: #1A3A38; }
+
+/* ── 13. FOOTER ───────────────────────────────────────────── */
+[data-theme="forest"] .footer-section {
+  background: #DFF0EB;
+}
+
+[data-theme="forest"] .footer-divider {
+  background-color: rgba(26, 58, 56, 0.2);
+}
+
+[data-theme="forest"] .footer-col-title       { color: #1A3A38; }
+[data-theme="forest"] .footer-links a         { color: rgba(26, 58, 56, 0.72); }
+[data-theme="forest"] .footer-links a:hover   { color: #1A3A38; }
+[data-theme="forest"] .footer-socials a       { color: rgba(26, 58, 56, 0.6); }
+[data-theme="forest"] .footer-socials a:hover { color: #1A3A38; }
+
+[data-theme="forest"] .footer-bottom-info {
+  border-top-color: rgba(26, 58, 56, 0.15);
+  color: rgba(26, 58, 56, 0.5);
+}
+
+/* ── 14. MISC GLOBAL ELEMENTS ─────────────────────────────── */
+[data-theme="forest"] .inner-inquire h2  { color: #F0FAF8; }
+[data-theme="forest"] .inner-inquire p   { color: rgba(223, 240, 235, 0.78); }
+
+[data-theme="forest"] .map-decorative-line { background: rgba(127, 181, 160, 0.4); }
+
+[data-theme="forest"] .section-padding { background: #DFF0EB; }
+
+[data-theme="forest"] .quote-section   { background: #DFF0EB; }
+[data-theme="forest"] .quote-text      { color: #1A3A38; }
+[data-theme="forest"] .quote-mark      { color: #7FB5A0; }
+
+
+/* ────────────────────────────────────────────────────────────
+   THEME: ocean   →  index3.html
+   Off-white: #F8F7F4  |  Navy accents: #1A3A5C / #3A6A8A
+   ──────────────────────────────────────────────────────────── */
+[data-theme="ocean"] {
+  --color-blush-parchment: #F8F7F4;
+  --color-deep-blush:      #EDECEA;
+  --color-dusty-rose:      #4A7A9B;
+  --color-warm-mauve:      #3A6A8A;
+  --color-faded-peony:     #B0C8DA;
+  --color-dark-rosewood:   #1A3A5C;
+  --color-antique-gold:    #4A7A9B;
+  --color-soft-ivory:      #FAFAF8;
+  --color-body-text:       #2A4A6A;
+}
+
+/* ── Navbar scrolled — off-white ────────────────────────── */
+[data-theme="ocean"] .inner-navbar.scrolled {
+  background-color: rgba(248, 247, 244, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(26, 58, 92, 0.1);
+  box-shadow: 0 2px 20px rgba(26, 58, 92, 0.06);
+}
+
+[data-theme="ocean"] .inner-navbar.scrolled .inner-nav-left a,
+[data-theme="ocean"] .inner-navbar.scrolled .inner-nav-right a:not(.btn-inquire) {
+  color: #1A3A5C;
+}
+
+[data-theme="ocean"] .inner-navbar.scrolled .btn-inquire {
+  color: #1A3A5C;
+  border-color: #1A3A5C;
+}
+
+[data-theme="ocean"] .inner-navbar.scrolled .btn-inquire:hover {
+  background-color: #1A3A5C;
+  color: #F8F7F4;
+}
+
+[data-theme="ocean"] .inner-navbar.scrolled .inner-nav-left > li > a::after,
+[data-theme="ocean"] .inner-navbar.scrolled .inner-nav-right > li > a:not(.btn-inquire)::after {
+  background-color: #3A6A8A;
+}
+
+/* ── Hero — neutral overlay ─────────────────────────────── */
+[data-theme="ocean"] .inner-hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* ── Transformation strip ───────────────────────────────── */
+[data-theme="ocean"] .transformation-text            { background-color: #1A3A5C; }
+[data-theme="ocean"] .transformation-image::before   { background: linear-gradient(to right, #1A3A5C, transparent); }
+
+/* ── Our Story overlay — neutral ────────────────────────── */
+[data-theme="ocean"] .about-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.90) 0%,
+    rgba(0, 0, 0, 0.72) 42%,
+    rgba(0, 0, 0, 0.20) 68%,
+    transparent 100%
+  );
+}
+
+/* ── Mobile overlay ─────────────────────────────────────── */
+[data-theme="ocean"] .inner-mobile-overlay  { background-color: #F8F7F4; }
+[data-theme="ocean"] .inner-mobile-overlay a{ color: #1A3A5C; }
+[data-theme="ocean"] .inner-mobile-overlay a:hover { color: #3A6A8A; }
+
+/* ── All content sections — same off-white ──────────────── */
+[data-theme="ocean"] .journey-types-section { background: #F8F7F4; }
+[data-theme="ocean"] .stories-section       { background: #F8F7F4; }
+[data-theme="ocean"] #private-travel        { background: #F8F7F4; }
+[data-theme="ocean"] .section-padding       { background: #F8F7F4; }
+[data-theme="ocean"] .quote-section         { background: #F8F7F4; }
+
+[data-theme="ocean"] .affiliates-section,
+[data-theme="ocean"] #inquire {
+  background: #F8F7F4;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* ── Bhutan map section — off-white, no glow ────────────── */
+[data-theme="ocean"] .bhutan-map-section   { background: #F8F7F4; }
+[data-theme="ocean"] .bhutan-map-section::before { display: none; }
+
+[data-theme="ocean"] .map-container svg .district            { fill: #7A9BB5; stroke: #1A3A5C; }
+[data-theme="ocean"] .map-container svg:hover .district      { fill: #B0C8DA; opacity: 0.7; }
+[data-theme="ocean"] .map-container svg .district:hover,
+[data-theme="ocean"] .map-container svg .district.active     { fill: #4A7A9B !important; opacity: 1 !important; }
+
+/* ── Footer — off-white with navy text ──────────────────── */
+[data-theme="ocean"] .footer-section       { background: #F8F7F4; }
+[data-theme="ocean"] .footer-divider       { background-color: rgba(26, 58, 92, 0.15); }
+[data-theme="ocean"] .footer-col-title     { color: #1A3A5C; }
+[data-theme="ocean"] .footer-links a       { color: rgba(26, 58, 92, 0.70); }
+[data-theme="ocean"] .footer-links a:hover { color: #1A3A5C; }
+[data-theme="ocean"] .footer-socials a     { color: rgba(26, 58, 92, 0.55); }
+[data-theme="ocean"] .footer-socials a:hover { color: #1A3A5C; }
+[data-theme="ocean"] .footer-bottom-info  { color: rgba(26, 58, 92, 0.45); border-top-color: rgba(26, 58, 92, 0.12); }
+
+
+/* ────────────────────────────────────────────────────────────
+   THEME: terracotta   →  index4.html
+   Palette: burnt terracotta + sand ivory + amber gold
+   ──────────────────────────────────────────────────────────── */
+[data-theme="terracotta"] {
+  --color-blush-parchment: #F5EDE4;
+  --color-deep-blush:      #E8D5C2;
+  --color-dusty-rose:      #B85A35;
+  --color-warm-mauve:      #A04A28;
+  --color-faded-peony:     #D4956A;
+  --color-dark-rosewood:   #6B2E15;
+  --color-antique-gold:    #C4882E;
+  --color-soft-ivory:      #FBF5EE;
+  --color-body-text:       #5A3020;
+}
+
+/* Navbar scrolled — desho image + warm parchment wash */
+[data-theme="terracotta"] .inner-navbar.scrolled {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)),
+    url('../images/desho bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(196, 136, 46, 0.25);
+  box-shadow: 0 2px 24px rgba(107, 46, 21, 0.1);
+}
+
+[data-theme="terracotta"] .inner-navbar.scrolled .inner-nav-left a,
+[data-theme="terracotta"] .inner-navbar.scrolled .inner-nav-right a:not(.btn-inquire) {
+  color: #6B2E15;
+}
+
+[data-theme="terracotta"] .inner-navbar.scrolled .btn-inquire {
+  color: #6B2E15;
+  border-color: #6B2E15;
+}
+
+[data-theme="terracotta"] .inner-navbar.scrolled .btn-inquire:hover {
+  background-color: #6B2E15;
+  color: #FBF5EE;
+}
+
+/* Hero — neutral dark overlay, no reddish tint */
+[data-theme="terracotta"] .inner-hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.58) 100%);
+}
+
+[data-theme="terracotta"] .inner-hero-bg {
+  filter: brightness(0.82) saturate(1);
+}
+
+[data-theme="terracotta"] .transformation-text {
+  background-color: #6B2E15;
+}
+
+[data-theme="terracotta"] .transformation-image::before {
+  background: linear-gradient(to right, #6B2E15, transparent);
+}
+
+/* Our Story — neutral dark overlay, no reddish tint */
+[data-theme="terracotta"] .about-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.90) 0%,
+    rgba(0, 0, 0, 0.72) 42%,
+    rgba(0, 0, 0, 0.20) 68%,
+    transparent 100%
+  );
+}
+
+[data-theme="terracotta"] .about-bg {
+  filter: brightness(0.72) saturate(1);
+}
+
+[data-theme="terracotta"] .inner-navbar.scrolled .inner-nav-left > li > a::after,
+[data-theme="terracotta"] .inner-navbar.scrolled .inner-nav-right > li > a:not(.btn-inquire)::after {
+  background-color: #A04A28;
+}
+
+[data-theme="terracotta"] .inner-mobile-overlay {
+  background-color: #F5EDE4;
+}
+
+[data-theme="terracotta"] .inner-mobile-overlay a {
+  color: #6B2E15;
+}
+
+/* ── shared background mixin — all sections use desho bg.jpg ─ */
+[data-theme="terracotta"] .journey-types-section,
+[data-theme="terracotta"] .stories-section,
+[data-theme="terracotta"] .bhutan-map-section,
+[data-theme="terracotta"] .affiliates-section,
+[data-theme="terracotta"] #inquire,
+[data-theme="terracotta"] .footer-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ── JOURNEY TYPES ─────────────────────────────────────────── */
+[data-theme="terracotta"] .journey-types-section {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.52)),
+    url('../images/desho bg.jpg');
+}
+
+[data-theme="terracotta"] .journey-types-eyebrow { color: #A04A28; }
+[data-theme="terracotta"] .journey-types-title   { color: #6B2E15; }
+[data-theme="terracotta"] .jt-card               { background-color: rgba(251, 245, 238, 0.92); }
+[data-theme="terracotta"] .jt-name               { color: #6B2E15; }
+[data-theme="terracotta"] .jt-desc               { color: #5A3020; }
+[data-theme="terracotta"] .jt-arrow              { color: #A04A28; }
+[data-theme="terracotta"] .slider-btn {
+  background: rgba(107, 46, 21, 0.12);
+  border-color: rgba(107, 46, 21, 0.35);
+  color: #6B2E15;
+}
+[data-theme="terracotta"] .slider-btn:hover {
+  background: #6B2E15;
+  border-color: #6B2E15;
+  color: #FBF5EE;
+}
+
+/* ── STORIES ──────────────────────────────────────────────── */
+[data-theme="terracotta"] .stories-section {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.46)),
+    url('../images/desho bg.jpg');
+}
+
+[data-theme="terracotta"] .stories-eyebrow { color: #A04A28; }
+[data-theme="terracotta"] .stories-title   { color: #6B2E15; }
+[data-theme="terracotta"] .stories-nav-btn {
+  border-color: rgba(107, 46, 21, 0.4);
+  color: #6B2E15;
+}
+[data-theme="terracotta"] .stories-nav-btn:hover {
+  background: #6B2E15;
+  border-color: #6B2E15;
+  color: #FBF5EE;
+}
+
+/* ── MAP SECTION ──────────────────────────────────────────── */
+[data-theme="terracotta"] .bhutan-map-section {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.55)),
+    url('../images/desho bg.jpg');
+  background-position: center top;
+}
+
+[data-theme="terracotta"] .map-container svg .district       { fill: #C4882E; stroke: #6B2E15; }
+[data-theme="terracotta"] .map-container svg:hover .district { fill: #D4956A; opacity: 0.7; }
+[data-theme="terracotta"] .map-container svg .district:hover,
+[data-theme="terracotta"] .map-container svg .district.active{ fill: #B85A35 !important; opacity: 1 !important; }
+[data-theme="terracotta"] .map-fact-card {
+  background: rgba(251, 245, 238, 0.90);
+  border-color: rgba(196, 136, 46, 0.35);
+}
+[data-theme="terracotta"] .map-fact-card:hover {
+  background: #FBF5EE;
+  border-color: #C4882E;
+}
+
+/* ── AFFILIATES / INQUIRE ─────────────────────────────────── */
+[data-theme="terracotta"] .affiliates-section,
+[data-theme="terracotta"] #inquire {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.54)),
+    url('../images/desho bg.jpg');
+  border-top-color: rgba(196, 136, 46, 0.25);
+  border-bottom-color: rgba(196, 136, 46, 0.25);
+}
+
+[data-theme="terracotta"] .affiliates-eyebrow { color: #A04A28; }
+[data-theme="terracotta"] .affiliates-title   { color: #6B2E15; }
+[data-theme="terracotta"] .affiliate-logo-item { opacity: 0.65; filter: grayscale(0.1); }
+[data-theme="terracotta"] .affiliate-logo-item:hover { opacity: 1; filter: none; }
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+[data-theme="terracotta"] .footer-section {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.56)),
+    url('../images/desho bg.jpg');
+  background-position: center bottom;
+}
+
+[data-theme="terracotta"] .footer-col-title       { color: #6B2E15; }
+[data-theme="terracotta"] .footer-links a         { color: rgba(90, 48, 32, 0.80); }
+[data-theme="terracotta"] .footer-links a:hover   { color: #6B2E15; }
+[data-theme="terracotta"] .footer-socials a       { color: rgba(107, 46, 21, 0.65); }
+[data-theme="terracotta"] .footer-socials a:hover { color: #6B2E15; }
+[data-theme="terracotta"] .footer-divider         { background-color: rgba(107, 46, 21, 0.2); }
+[data-theme="terracotta"] .footer-bottom-info     { color: rgba(90, 48, 32, 0.55); border-top-color: rgba(107, 46, 21, 0.15); }
+
+/* ── MOBILE: fixed attachment off (iOS Safari) ────────────── */
+@media (max-width: 768px) {
+  [data-theme="terracotta"] .journey-types-section,
+  [data-theme="terracotta"] .stories-section,
+  [data-theme="terracotta"] .bhutan-map-section,
+  [data-theme="terracotta"] .affiliates-section,
+  [data-theme="terracotta"] #inquire,
+  [data-theme="terracotta"] .footer-section {
+    background-attachment: scroll;
+  }
+}
+
+

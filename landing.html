@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dralwa Journeys — Bhutan</title>
+  <meta name="description"
+    content="A poetic, tactile journey through Bhutan, the last Himalayan kingdom. Begin your bespoke luxury travel experience.">
+  <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body class="landing-body">
+
+  <!-- Corner pattern images — float gently, mirrored per corner via CSS -->
+  <img src="images/patterns.png" class="corner-pattern pattern-top-left" alt="Bhutanese Pattern Ornament">
+  <img src="images/patterns.png" class="corner-pattern pattern-top-right" alt="Bhutanese Pattern Ornament">
+  <img src="images/patterns.png" class="corner-pattern pattern-bottom-left" alt="Bhutanese Pattern Ornament">
+  <img src="images/patterns.png" class="corner-pattern pattern-bottom-right" alt="Bhutanese Pattern Ornament">
+
+  <!-- Screen transition overlay — fades to parchment-ivory before redirect -->
+  <div class="transition-overlay" id="page-transition-overlay"></div>
+
+  <!-- ── Header ── -->
+  <header class="landing-header">
+    <h1 class="landing-title">Dralwa Journeys</h1>
+    <div class="landing-subtitle-wrapper">
+      <div class="subtitle-line"></div>
+      <span class="landing-subtitle">Bhutan</span>
+      <div class="subtitle-line"></div>
+    </div>
+  </header>
+
+  <!-- ── Envelope — click to enter ── -->
+  <main class="envelope-container" id="main-envelope" role="button" tabindex="0"
+    aria-label="Tap the envelope to begin your journey">
+
+    <div class="envelope-shadow"></div>
+
+    <img src="images/envelope.png" class="envelope-image-base" alt="An elegant closed envelope with a wax seal"
+      loading="eager">
+
+    <button type="button" class="envelope-tap-btn" tabindex="-1" aria-hidden="true">
+      <span class="envelope-tap-wave"></span>
+      <span class="envelope-tap-wave envelope-tap-wave-delay"></span>
+      <span class="envelope-tap-label">Tap</span>
+    </button>
+
+  </main>
+
+  <!-- ── Footer CTA ── -->
+  <footer class="landing-footer">
+    <div class="landing-cta">Tap the envelope to begin</div>
+
+  </footer>
+
+  <script src="js/landing.js"></script>
+
+</body>
+
+</html>
