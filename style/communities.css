@@ -235,6 +235,7 @@
   .dzongkhag-grid { grid-template-columns: 1fr; }
   .dzongkhag-card { height: 320px; }
   .comm-hero { height: 60vh; min-height: 380px; }
+  .comm-hero-content { padding: 0 1.25rem 3.5rem; }
 }
 
 
@@ -462,4 +463,8 @@ em, i     { font-style: normal !important; }
   }
 
   .phil-story-inner { padding: 16rem 1.25rem 4rem; }
+}
+
+@media (max-width: 480px) {
+  .phil-story-inner { padding: 11rem 1.25rem 3rem; }
 }

@@ -1697,6 +1697,11 @@ html {
   background: none;
   border: none;
   cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.inner-navbar.scrolled .inner-mobile-btn {
   color: var(--color-dark-rosewood);
 }
 
@@ -1856,6 +1861,17 @@ html {
 .journey-slider-overflow {
   overflow: hidden;
   width: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.journey-slider-overflow:active {
+  cursor: grabbing;
+}
+
+.journey-slider-overflow img,
+.journey-slider-overflow a {
+  -webkit-user-drag: none;
 }
 
 .journey-types-grid {
@@ -2846,6 +2862,14 @@ html {
     min-height: 300px;
   }
 
+  .transformation-text {
+    padding: 3.5rem 2rem;
+  }
+
+  .transformation-desc {
+    max-width: 100%;
+  }
+
   .quote-flower-left,
   .quote-flower-right {
     width: 140px;
@@ -2868,6 +2892,41 @@ html {
   .transformation-text {
     padding: 3.5rem 2rem;
   }
+
+  .journey-types-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .journey-slider-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  #journey-prev {
+    order: 1;
+  }
+
+  #journey-next {
+    order: 2;
+  }
+
+  .journey-slider-overflow {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 1rem;
+  }
+
+  .slider-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .slider-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -2875,6 +2934,20 @@ html {
     flex: 0 0 100%;
     /* 1 card */
     border-radius: 0;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .jt-img {
+    height: 300px;
+  }
+
+  .jt-name {
+    font-size: 0.82rem;
+  }
+
+  .jt-desc {
+    font-size: 1rem;
   }
 }
 

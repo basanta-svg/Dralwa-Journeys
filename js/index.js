@@ -32,21 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('journey-slider-track');
   const btnPrev = document.getElementById('journey-prev');
   const btnNext = document.getElementById('journey-next');
+  const journeyWrapper = track.parentElement;
   let currentIndex = 0;
+  let jDragStartX = 0, jDragCurrentX = 0, jIsDragging = false, jHasDragged = false;
+
+  function getJourneyStep() {
+    const cardWidth = track.children[0].offsetWidth;
+    const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+    return cardWidth + gap;
+  }
+
+  function getJourneyMaxIndex() {
+    const containerWidth = journeyWrapper.offsetWidth;
+    const cardWidth = track.children[0].offsetWidth;
+    const visibleCards = Math.round(containerWidth / cardWidth);
+    return Math.max(0, track.children.length - visibleCards);
+  }
 
   function updateSlider() {
-    const cardWidth = track.children[0].offsetWidth;
-    const gap = parseFloat(window.getComputedStyle(track).gap);
-    const moveAmount = cardWidth + gap;
-    track.style.transform = `translateX(-${currentIndex * moveAmount}px)`;
+    track.style.transition = '';
+    track.style.transform = `translateX(-${currentIndex * getJourneyStep()}px)`;
   }
 
   btnNext.addEventListener('click', () => {
-    const containerWidth = track.parentElement.offsetWidth;
-    const cardWidth = track.children[0].offsetWidth;
-    const visibleCards = Math.round(containerWidth / cardWidth);
-    const maxIndex = track.children.length - visibleCards;
-
+    const maxIndex = getJourneyMaxIndex();
     if (currentIndex < maxIndex) {
       currentIndex++;
       updateSlider();
@@ -62,6 +71,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', () => {
     currentIndex = 0;
+    updateSlider();
+  });
+
+  // Mouse drag
+  journeyWrapper.addEventListener('mousedown', e => {
+    jIsDragging = true; jHasDragged = false;
+    jDragStartX = e.clientX;
+    track.style.transition = 'none';
+  });
+
+  window.addEventListener('mousemove', e => {
+    if (!jIsDragging) return;
+    jDragCurrentX = e.clientX - jDragStartX;
+    if (Math.abs(jDragCurrentX) > 4) jHasDragged = true;
+    const base = currentIndex * getJourneyStep();
+    track.style.transform = `translateX(${-base + jDragCurrentX}px)`;
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!jIsDragging) return;
+    jIsDragging = false;
+    const threshold = getJourneyStep() * 0.25;
+    const maxIndex = getJourneyMaxIndex();
+    if (jDragCurrentX < -threshold && currentIndex < maxIndex) currentIndex++;
+    else if (jDragCurrentX > threshold && currentIndex > 0) currentIndex--;
+    jDragCurrentX = 0;
+    updateSlider();
+  });
+
+  // Prevent link navigation/clicks on cards firing right after a drag
+  track.addEventListener('click', e => {
+    if (jHasDragged) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
+  // Touch drag
+  journeyWrapper.addEventListener('touchstart', e => {
+    jDragStartX = e.touches[0].clientX;
+    track.style.transition = 'none';
+  }, { passive: true });
+
+  journeyWrapper.addEventListener('touchmove', e => {
+    jDragCurrentX = e.touches[0].clientX - jDragStartX;
+    jHasDragged = Math.abs(jDragCurrentX) > 4;
+    const base = currentIndex * getJourneyStep();
+    track.style.transform = `translateX(${-base + jDragCurrentX}px)`;
+  }, { passive: true });
+
+  journeyWrapper.addEventListener('touchend', () => {
+    const threshold = getJourneyStep() * 0.25;
+    const maxIndex = getJourneyMaxIndex();
+    if (jDragCurrentX < -threshold && currentIndex < maxIndex) currentIndex++;
+    else if (jDragCurrentX > threshold && currentIndex > 0) currentIndex--;
+    jDragCurrentX = 0;
     updateSlider();
   });
 
