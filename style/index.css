@@ -1451,7 +1451,7 @@ html {
   right: 0;
   margin: 0;
   width: 100%;
-  background-color: var(--color-blush-parchment);
+  background-color: transparent;
   border-bottom: none;
   z-index: 100;
 }
@@ -1523,7 +1523,7 @@ html {
   text-decoration: none;
   font-family: var(--font-serif);
   font-size: 0.82rem;
-  color: var(--color-dark-rosewood);
+  color: rgba(250, 244, 239, 0.9);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: color 0.25s ease;
@@ -1551,7 +1551,7 @@ html {
 
 .inner-nav-left a:hover,
 .inner-nav-right a:not(.btn-inquire):hover {
-  color: var(--color-warm-mauve);
+  color: rgba(250, 244, 239, 1);
 }
 
 .nav-item-dropdown {
@@ -1613,17 +1613,18 @@ html {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-dark-rosewood);
+  color: rgba(250, 244, 239, 0.9);
   text-decoration: none;
-  border: 1px solid var(--color-dark-rosewood);
+  border: 1px solid rgba(250, 244, 239, 0.9);
   padding: 0.42rem 1.25rem;
   transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   white-space: nowrap;
 }
 
 .btn-inquire:hover {
-  background-color: var(--color-dark-rosewood);
-  color: var(--color-soft-ivory);
+  background-color: rgba(250, 244, 239, 0.15);
+  color: rgba(250, 244, 239, 1);
+  border-color: rgba(250, 244, 239, 1);
 }
 
 /* ── Scrolled state ── */
@@ -1666,7 +1667,7 @@ html {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-dark-rosewood);
+  color: rgba(250, 244, 239, 0.9);
   transition: color 0.3s ease;
 }
 
@@ -2824,7 +2825,12 @@ html {
   }
 
   .inner-navbar {
+    background-color: var(--color-blush-parchment);
     border-bottom: 1px solid rgba(196, 168, 130, 0.25);
+  }
+
+  .inner-mobile-btn {
+    color: var(--color-dark-rosewood);
   }
 
   .transformation-strip {
