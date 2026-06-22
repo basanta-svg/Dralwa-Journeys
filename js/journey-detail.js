@@ -30,9 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     return Math.max(0, slideCount - getVisibleCount());
   }
 
+  function getSlideWidth() {
+    const firstSlide = slides[0];
+    if (!firstSlide) return 0;
+    const slideStyle = window.getComputedStyle(firstSlide);
+    const gap = parseFloat(slideStyle.marginRight || 0) + parseFloat(slideStyle.marginLeft || 0);
+    return firstSlide.getBoundingClientRect().width + gap;
+  }
+
   function update() {
-    const percent = (currentIndex * 100) / slideCount;
-    track.style.transform = `translateX(-${percent}%)`;
+    const slideWidth = getSlideWidth();
+    if (slideWidth) {
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    } else {
+      const percent = (currentIndex * 100) / slideCount;
+      track.style.transform = `translateX(-${percent}%)`;
+    }
   }
 
   nextBtn.addEventListener('click', () => {

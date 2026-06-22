@@ -46,9 +46,13 @@
   font-weight: 600;
   color: var(--color-antique-gold);
   margin-bottom: 1rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  width: fit-content;
+  padding: 0.45rem 0.7rem;
+  background-color: rgba(237, 223, 186, 0.16);
+  border-radius: 999px;
 }
 
 .comm-hero-eyebrow::before {
