@@ -251,7 +251,7 @@
 
 /* ── Team Section ─────────────────────────────────────────── */
 .about-team-section {
-  background-color: var(--color-dark-rosewood);
+  background-color: var(--color-blush-parchment);
   padding: 7rem 2rem;
   position: relative;
   overflow: hidden;
@@ -278,7 +278,7 @@
   letter-spacing: 0.38em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--color-antique-gold);
+  color: var(--color-warm-mauve);
   margin-bottom: 1rem;
 }
 
@@ -287,7 +287,7 @@
   font-size: clamp(1.8rem, 4vw, 3rem);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-soft-ivory);
+  color: var(--color-dark-rosewood);
   line-height: 1.15;
 }
 
@@ -295,7 +295,7 @@
   font-family: var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.85;
-  color: rgba(250, 244, 239, 0.7);
+  color: var(--color-body-text);
   padding-bottom: 0.5rem;
 }
 
