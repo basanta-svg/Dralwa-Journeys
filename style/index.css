@@ -3144,7 +3144,21 @@ html {
   }
 
   .map-container svg .district-label {
-    font-size: 5px;
+    font-size: 3.5px;
+  }
+
+  .map-tooltip {
+    min-width: 140px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .map-tooltip-name {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .map-tooltip-desc {
+    font-size: 0.6rem;
   }
 
   .bhutan-map-subtitle {

@@ -150,6 +150,7 @@ a.contact-value:hover {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  min-width: 0;
 }
 
 .form-group label {
@@ -171,6 +172,8 @@ a.contact-value:hover {
   padding: 0.85rem 1rem;
   outline: none;
   resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
   transition: border-color 0.25s ease;
 }
 
@@ -239,8 +242,33 @@ a.contact-value:hover {
 }
 
 @media (max-width: 600px) {
-  .contact-section { padding: 4rem 1.25rem; }
-  .form-row { grid-template-columns: 1fr; }
-  .contact-form { padding: 2rem; }
-  .contact-map-section iframe { height: 360px; }
+  .contact-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .contact-map-section iframe {
+    height: 360px;
+  }
+
+  .form-group select {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    max-width: 280px;
+  }
+
+  .form-group select option {
+    font-size: 0.75rem;
+    max-width: 280px;
+    width: 250px;
+  }
 }
